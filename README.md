@@ -22,36 +22,35 @@ Tracks if the asset price meets the Kickout Barrier to trigger early redemption.
 Evaluates final payouts, including principal protection, if maturity is reached.
 ##### Monte Carlo Aggregation:
 Repeats simulations over thousands of paths to compute the average expected payoff.
-##### Discounting:
+##### Discounting: 
 Discounts cash flows to present value using the risk-free rate.
 
 ### Code Overview
 #### Main Functions
 'payoff' Simulates the price evolution of the underlying asset and calculates payouts based on kickout and protection barriers.
 
-monteCarloPrice
-Runs multiple simulations using payoff to calculate the expected price of the product.
+'monteCarloPrice' Runs multiple simulations using payoff to calculate the expected price of the product.
 
-monte_carlo_interface
-Provides an interactive widget interface to experiment with parameters and visualize results.
+'monte_carlo_interface' Provides an interactive widget interface to experiment with parameters and visualize results.
 
-How to Use
-Setup
-Clone the repository:
-bash
-Copier le code
+### How to Use
+#### Setup
+
+**Clone the repository:**
+
 git clone <repository-url>
 cd <repository-directory>
-Install dependencies:
-bash
-Copier le code
-pip install numpy pandas ipywidgets
-Run the Simulation
-Run the Jupyter Notebook or Python script and interact with the widget-based interface to:
 
-Define parameters like drift, volatility, barriers, and maturity.
-Compute and display the product's price.
-Parameters
+**Install dependencies:**
+
+pip install numpy pandas ipywidgets
+
+### Run the Simulation
+Run the Jupyter Notebook or Python script and interact with the widget-based interface to:
+- Define parameters like drift, volatility, barriers, and maturity.
+- Compute and display the product's price.
+
+### Parameters
 t_steps: Number of time steps in the simulation.
 TtM: Time to maturity (in years).
 Drift: Drift of the underlying price path.
@@ -63,5 +62,3 @@ S_p: Protection barrier for principal repayment.
 N: Nominal value of the investment.
 I: Yearly interest rate over the nominal value.
 n_simu: Number of Monte Carlo simulations.
-Example Interface
-The widget interface enables users to modify parameters interactively and observe the impact on the pricing outcome.
